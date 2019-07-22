@@ -18,12 +18,14 @@
         android:orientation="vertical"
 
         >
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/logonotestaker"
-            />
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            android:src="@drawable/logonotestakersputih" />
 
         <EditText
             android:id="@+id/editText"
@@ -35,7 +37,6 @@
             android:inputType="textPersonName"
             android:textColor="@color/colorAccent2"
             android:textColorHint="@color/colorAccent2"
-            android:outlineAmbientShadowColor=""
             android:hint="Username" />
 
         <EditText
@@ -70,6 +71,7 @@
                 android:textColor="@color/colorAccent2"
                 />
             <TextView
+                android:id="@+id/tvSignup"
                 android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

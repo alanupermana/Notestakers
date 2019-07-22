@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="113dp"
-        android:layout_marginBottom="182dp"
         android:layout_marginLeft="48dp"
         android:layout_marginRight="48dp"
         android:orientation="vertical"
@@ -22,24 +21,36 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:src="@drawable/logonotestaker"
+            android:src="@drawable/logonotestakersputih"
+            android:adjustViewBounds="true"
             />
 
         <EditText
-            android:id="@+id/editText"
+            android:id="@+id/etUsername"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="148dp"
+            android:layout_marginTop="76dp"
             android:layout_weight="1"
             android:ems="10"
             android:inputType="textPersonName"
             android:textColor="@color/colorAccent2"
             android:textColorHint="@color/colorAccent2"
-            android:outlineAmbientShadowColor=""
             android:hint="Username" />
 
         <EditText
-            android:id="@+id/editText2"
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            android:hint="Email"
+            android:textColor="@color/colorAccent2"
+            android:textColorHint="@color/colorAccent2"
+            />
+
+        <EditText
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
@@ -48,12 +59,42 @@
             android:hint="Password"
             android:textColorHint="@color/colorAccent2"
             />
+        <EditText
+            android:id="@+id/etRePassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:hint="Re-type Password"
+            android:textColorHint="@color/colorAccent2"
+            />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_gravity="center"
+            >
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I have accepted the license Agreements of Notstakers"
+                android:textColor="@color/colorPrimaryDark2"
+                android:textStyle="bold" />
+        </LinearLayout>
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="34dp"
-            android:text="Sign in"
+            android:text="Sign Up"
             android:background="@drawable/shape_radius_button"
             android:textColor="@color/colorPrimaryDark"
             />
@@ -66,14 +107,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Haven’t Account Yet?"
+                android:text="Already Have an Account?"
                 android:textColor="@color/colorAccent2"
                 />
             <TextView
+                android:id="@+id/tvSignin"
                 android:layout_marginLeft="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sign Up Here"
+                android:text="Sign In Here"
                 android:textStyle="bold"
                 android:textColor="@color/colorPrimaryDark2"
                 />
