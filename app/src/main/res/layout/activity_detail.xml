@@ -28,14 +28,68 @@
 
     <ImageView
         android:id="@+id/img_detail_photo"
-        android:layout_width="150dp"
-        android:layout_height="220dp"
+        android:layout_width="120dp"
+        android:layout_height="180dp"
         android:layout_below="@id/btn_back"
-        tools:
+        tools:src="@color/colorPrimary"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="16dp"/>
 
     <TextView
+        android:id="@+id/tv_detail_noteTitle"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@+id/img_detail_photo"
+        android:layout_alignTop="@+id/img_detail_photo"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="8dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_black"
+        android:text="The Title of Note"/>
+
+    <LinearLayout
+        android:id="@+id/group_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_below="@+id/tv_detail_noteTitle"
+        android:layout_toEndOf="@+id/img_detail_photo"
+        >
+
+        <TextView
+            android:id="@+id/tv_detail_category"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            android:text="Note"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:text="|"/>
+        <TextView
+            android:id="@+id/tv_detail_subject"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            android:text="Math"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:text="|"/>
+        <TextView
+            android:id="@+id/tv_detail_isVerified"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/text_black"
+            android:text="Verified"/>
+    </LinearLayout>
+
 
 </RelativeLayout>
