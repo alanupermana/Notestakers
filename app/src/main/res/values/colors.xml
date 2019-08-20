@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
 <resources>
     <color name="colorPrimary">#82CAFE</color>
     <color name="colorPrimaryDark">#40A9F5</color>
@@ -6,10 +8,21 @@
     <color name="colorAccent">#F4F7FB</color>
     <color name="colorAccent2">#FFFFFF</color>
 
+    <!-- Text color-->
+    <color name="text_black">#000</color>
+    <color name="text_blue">#047DC0</color>
+    <color name="text_red">#DC2323</color>
+    <color name="text_green">#13C004</color>
+
+    <!-- shape color-->
+    <color name="shape_blue">#047DC0</color>
+    <color name="shape_red">#047DC0</color>
+    <color name="shape_green">#DC2323</color>
+    <color name="shape_purple">#13C004</color>
+
     <!-- Screens background color-->
     <color name="bg_slider_screen1">#F4F7FB</color>
-    <color name="bg_slider_screen2">#F4F7FB</color>
-    <color name="bg_slider_screen3">#F4F7FB</color>
+
 
 
     <!-- dots inactive colors -->
@@ -33,5 +46,6 @@
         <item>@color/dot_inactive_screen2</item>
         <item>@color/dot_inactive_screen3</item>
     </array>
+
 
 </resources>

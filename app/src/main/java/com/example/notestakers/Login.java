@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
-
+    Button btnLogin;
     TextView tvSignup;
 
     @Override
@@ -16,12 +16,21 @@ public class Login extends AppCompatActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_login );
 
+        btnLogin = findViewById(R.id.btn_login);
         tvSignup = findViewById(R.id.tvSignup);
         tvSignup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(Login.this,SignUp.class);
                 startActivity(i);
+            }
+        });
+
+        btnLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Login.this,Profile.class);
+                startActivity(intent);
             }
         });
     }
