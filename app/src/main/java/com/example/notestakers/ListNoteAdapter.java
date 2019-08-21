@@ -36,7 +36,7 @@ public class ListNoteAdapter extends RecyclerView.Adapter<ListNoteAdapter.Catego
     }
 
     @Override
-    public void onBindViewHolder(@NonNull CategoryViewHolder categoryViewHolder, int i) {
+    public void onBindViewHolder(@NonNull final CategoryViewHolder categoryViewHolder, int i) {
         final Note note = listNote.get(i);
         Glide.with(categoryViewHolder.itemView.getContext())
                 .load(note.getPhotoNote())
@@ -52,6 +52,14 @@ public class ListNoteAdapter extends RecyclerView.Adapter<ListNoteAdapter.Catego
         categoryViewHolder.tvIsVerified.setText(note.getIsVerified());
         categoryViewHolder.tvPrice.setText(note.getPrice());
         categoryViewHolder.tvAuthor.setText(note.getAuthor());
+        categoryViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(categoryViewHolder.itemView.getContext(),Detail.class);
+                intent.putExtra("note",note);
+                categoryViewHolder.itemView.getContext().startActivity(intent);
+            }
+        });
 
     }
 
