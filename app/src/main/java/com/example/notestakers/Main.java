@@ -6,6 +6,7 @@ import android.support.design.widget.BottomNavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.example.notestakers.Home.HomeFragment;
 
@@ -53,4 +54,7 @@ public class Main extends AppCompatActivity implements BottomNavigationView.OnNa
         }
         return loadFragment(fragment);
     }
+
+
+
 }

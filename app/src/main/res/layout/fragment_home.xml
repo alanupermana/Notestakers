@@ -18,43 +18,50 @@
         android:layout_marginEnd="16dp"
         >
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/civPhotoProfile"
-            android:layout_width="55dp"
-            android:layout_height="55dp"
-            android:layout_marginEnd="16dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:src="@drawable/img_home_profile" />
-
-        <!--VERTICAL-->
         <LinearLayout
+            android:id="@+id/onClickToProfile"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:gravity="center"
-            android:layout_marginEnd="8dp"
-            android:orientation="vertical"
-            android:layout_toEndOf="@id/civPhotoProfile"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
             >
 
-            <!--ALANU DINASTI-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="MyName"
-                android:textColor="@color/black"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/civPhotoProfile"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:layout_marginEnd="16dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/img_home_profile" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:layout_marginEnd="8dp"
+                android:orientation="vertical"
+                android:layout_toEndOf="@id/civPhotoProfile"
+                >
 
-            <!--S1 INFORMATIKA-->
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
-                android:layout_marginBottom="4dp"
-                android:text="MyEmail@gmail.com"
-                android:textColor="@color/black"
-                android:textSize="12sp" />
+                <!--ALANU DINASTI-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MyName"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <!--S1 INFORMATIKA-->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:text="MyEmail@gmail.com"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

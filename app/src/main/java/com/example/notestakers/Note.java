@@ -4,7 +4,7 @@ import android.os.Parcel;
 import android.os.Parcelable;
 
 public class Note implements Parcelable {
-    private String photoNote, title, category, subject, isVerified,price,author,photoAuthor;
+    private String photoNote, title, category, subject, isVerified,price,author,photoAuthor,emailAuthor,purchaseCount,likeCount;
 
     public Note(){
     }
@@ -18,6 +18,9 @@ public class Note implements Parcelable {
         price = in.readString();
         author = in.readString();
         photoAuthor = in.readString();
+        emailAuthor = in.readString();
+        purchaseCount = in.readString();
+        likeCount = in.readString();
     }
 
     public static final Creator<Note> CREATOR = new Creator<Note>() {
@@ -111,5 +114,33 @@ public class Note implements Parcelable {
         dest.writeString(price);
         dest.writeString(author);
         dest.writeString(photoAuthor);
+        dest.writeString(emailAuthor);
+        dest.writeString(purchaseCount);
+        dest.writeString(likeCount);
+    }
+
+    public String getLikeCount() {
+        return likeCount;
+    }
+
+    public void setLikeCount(String likeCount) {
+        this.likeCount = likeCount;
+    }
+
+    public String getPurchaseCount() {
+        return purchaseCount;
+    }
+
+    public void setPurchaseCount(String purchaseCount) {
+        this.purchaseCount = purchaseCount;
+    }
+
+    public String getEmailAuthor() {
+        return emailAuthor;
+    }
+
+    public void setEmailAuthor(String emailAuthor) {
+        this.emailAuthor = emailAuthor;
     }
 }
+

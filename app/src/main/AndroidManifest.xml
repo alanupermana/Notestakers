@@ -13,11 +13,11 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".Profile"></activity>
-        <activity android:name=".DetailNotes"></activity>
+        <activity android:name=".Detail"></activity>
         <activity android:name=".Main" />
         <activity android:name=".SignUp" />
         <activity android:name=".Login" />
-        <activity android:name=".onboarding.Introdution" />
+        <activity android:name=".onboarding.Introduction" />
         <activity android:name=".splashscreen.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
