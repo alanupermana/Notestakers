@@ -7,6 +7,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.notestakers.Home.HomeFragment;
+
 public class Login extends AppCompatActivity {
     Button btnLogin;
     TextView tvSignup;
@@ -29,12 +31,12 @@ public class Login extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Login.this,Profile.class);
+                Intent intent = new Intent(Login.this, Main.class);
                 startActivity(intent);
             }
         });
     }
-
-
-
 }
+
+
+

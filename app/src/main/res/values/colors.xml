@@ -7,6 +7,18 @@
     <color name="colorPrimaryDark2">#047DC0</color>
     <color name="colorAccent">#F4F7FB</color>
     <color name="colorAccent2">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Category-->
+    <color name="blueShape">#CCE8FC</color>
+    <color name="blueText">#047DC0</color>
+    <color name="pinkShape">#FFBABA</color>
+    <color name="pinkText">#DC2323</color>
+    <color name="greenShape">#C0FFBA</color>
+    <color name="geenText">#13C004</color>
+
+
+
 
     <!-- Text color-->
     <color name="text_black">#000</color>
