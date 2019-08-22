@@ -14,8 +14,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.notestakers.Login;
+import com.example.notestakers.NoteData;
 import com.example.notestakers.Profile;
 import com.example.notestakers.R;
 import com.example.notestakers.SignUp;
@@ -23,8 +25,8 @@ import com.example.notestakers.SignUp;
 import java.util.ArrayList;
 import java.util.List;
 
-public class HomeFragment extends Fragment implements View.OnClickListener {
-
+public class HomeFragment extends Fragment{
+    private ArrayList<com.example.notestakers.Note> list = new ArrayList<>();
     private List<Note> mLists = new ArrayList<>();
     private RecyclerView mRecyclerView;
     private ViewGroup toProfile;
@@ -40,8 +42,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         mRecyclerView = view.findViewById(R.id.rv_ListNotes);
-        mLayoutManager = new LinearLayoutManager(getContext());
-        mAdapter = new ListNoteAdapter(mLists);
+        mRecyclerView.setHasFixedSize(true);
+        list.addAll(NoteData.getListData());
+        showRecyclerList();
+
+
+
         toProfile = view.findViewById(R.id.onClickToProfile);
 
         toProfile.setOnClickListener(new View.OnClickListener() {
@@ -60,9 +66,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     }
 
 
-    @Override
-    public void onClick(View view) {
+    private void showRecyclerList(){
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        ListNoteAdapter listNoteAdapter = new ListNoteAdapter(list);
+        mRecyclerView.setAdapter(listNoteAdapter);
+
 
     }
+
+
 }
 

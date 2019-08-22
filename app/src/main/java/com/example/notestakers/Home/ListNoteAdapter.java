@@ -16,8 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListNoteAdapter extends RecyclerView.Adapter<ListNoteAdapter.CategoryViewHolder> {
-    private List<Note> listNote;
-    public ListNoteAdapter(List<Note> listNote){this.listNote = listNote;}
+    private ArrayList<com.example.notestakers.Note> listNote;
+    public ListNoteAdapter(ArrayList<com.example.notestakers.Note> listNote){this.listNote = listNote;}
     private OnItemClickCallback onItemClickCallback;
 
     public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback){
@@ -38,7 +38,7 @@ public class ListNoteAdapter extends RecyclerView.Adapter<ListNoteAdapter.Catego
 
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder categoryViewHolder, int i) {
-        final Note note = listNote.get(i);
+        final com.example.notestakers.Note note = listNote.get(i);
         Glide.with(categoryViewHolder.itemView.getContext())
                 .load(note.getPhotoNote())
                 .apply(new RequestOptions())
