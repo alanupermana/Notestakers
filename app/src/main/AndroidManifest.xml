@@ -17,7 +17,7 @@
         <activity android:name=".Main" />
         <activity android:name=".SignUp" />
         <activity android:name=".Login" />
-        <activity android:name=".onboarding.Introduction" />
+        <activity android:name=".onboarding.Introdution" />
         <activity android:name=".splashscreen.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
